@@ -1,0 +1,30 @@
+{
+  "name": "Room",
+  "plural": "Rooms",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "location": {
+      "type": "string"
+    },
+    "room_type": {
+      "type": "string"
+    },
+    "current_price": {
+      "type": "number"
+    },
+    "room_status": {
+      "type": "string"
+    },
+    "room_number": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

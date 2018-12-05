@@ -1,0 +1,39 @@
+{
+  "name": "Payment",
+  "plural": "Payments",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "charge_date": {
+      "type": "date"
+    },
+    "total_amount": {
+      "type": "number"
+    },
+    "amount_paid": {
+      "type": "number"
+    },
+    "card_number": {
+      "type": "number"
+    },
+    "guest_id": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "guest_id": {
+      "type": "hasOne",
+      "model": "Guest",
+      "foreignKey": "guest_id",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Reservation",
+  "plural": "Reservations",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "check_in_date": {
+      "type": "date"
+    },
+    "check_out_date": {
+      "type": "date"
+    },
+    "guest_id": {
+      "type": "number"
+    },
+    "room_number": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "guest_id": {
+      "type": "hasOne",
+      "model": "Guest",
+      "foreignKey": "guest_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "room_id": {
+      "type": "hasOne",
+      "model": "Room",
+      "foreignKey": "room_number",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
